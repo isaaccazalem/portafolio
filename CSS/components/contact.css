@@ -1,0 +1,150 @@
+.contact-section {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.contact-heading h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.contact-heading h2 span {
+  color: var(--accent-2);
+}
+
+.contact-heading > p:last-child {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 4%;
+  align-items: stretch;
+}
+
+.contact-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.contact-image {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  max-height: 420px;
+  object-fit: contain;
+}
+
+.contact-form {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #0a0612;
+  color: var(--text);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.form-note {
+  margin: 8px 0 0;
+  color: var(--accent-2);
+  font-size: 0.82rem;
+}
+
+.light-theme .field input,
+.light-theme .field textarea {
+  background: #fff;
+}
+
+/* Para que Chrome no pinte de blanco el autocompletado */
+.contact-form input:-webkit-autofill,
+.contact-form input:-webkit-autofill:hover,
+.contact-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px #0a0612 inset;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.light-theme .contact-form input:-webkit-autofill,
+.light-theme .contact-form input:-webkit-autofill:hover,
+.light-theme .contact-form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #111;
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+
+@media (max-width: 700px) {
+  .contact-section {
+    padding-top: 16px;
+    padding-bottom: 24px;
+  }
+
+  .contact-heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-art {
+    height: auto;
+  }
+
+  .contact-image {
+    max-width: 220px;
+    height: auto;
+    max-height: none;
+  }
+
+  .contact-form {
+    padding: 14px;
+  }
+
+  .field textarea {
+    min-height: 60px;
+  }
+}
